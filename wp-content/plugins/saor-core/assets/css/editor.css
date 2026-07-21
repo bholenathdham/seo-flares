@@ -1,0 +1,13 @@
+.elementor-panel .elementor-element .icon i.th-icon::before{
+	display: none;
+}
+
+.elementor-panel .elementor-element .icon i.th-icon::after{
+    width: 30px;
+    height: 30px;
+    content: "";
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: -6px;
+	background: url("https://s3.envato.com/files/473958287/thumbnail.png") no-repeat center center/cover;
+}

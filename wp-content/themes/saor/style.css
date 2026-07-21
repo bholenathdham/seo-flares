@@ -1,0 +1,31 @@
+/*
+Theme Name: Saor
+Theme URI: https://wordpress.themeholy.com/saor
+Author: Themeholy
+Author URI: https://themeforest.net/user/themeholy 
+Description: Saor - SEO Digital Marketing Agency WordPress Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: saor
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others. 
+Requires at least: 5.0
+Tested up to: 5.8
+Requires PHP: 7.4
+
+*/
+
+/* Header sub-menu icon */
+.hide-icon.main-menu ul.sub-menu li a:before {
+    display: none;
+}
+.hide-icon.main-menu ul.sub-menu li a:hover {
+    padding-left: 0;
+}
+
+/*  */
+.filter-item.hidden {
+    display: none;
+}
