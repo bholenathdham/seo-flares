@@ -1,32 +1,4 @@
-# robots.txt file for https://seoflares.info
 User-agent: *
-Disallow: /cgi-bin
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /wp-content/plugins/
-Disallow: /wp-content/cache
-Disallow: /wp-content/themes/
-Disallow: /trackback/
-Disallow: /*trackback*
-Disallow: /comments/feed/
-Disallow: /feed/
-Disallow: /category/*/feed/
-Disallow: /tag/*/feed/
-Disallow: /author/*/feed/
-Disallow: /search/
-Disallow: /xmlrpc.php
-Disallow: /readme.html
-Disallow: /license.txt
-Disallow: /wp-config-sample.php
-Disallow: /wp-login.php
-Disallow: /wp-signup.php
-Disallow: /wp-activate.php
-Disallow: /*?*
-Disallow: /*.html/$
-
-# Google Image
-User-agent: Googlebot-Image
-Disallow:
-Allow: /*
+Allow: /
 
 Sitemap: https://seoflares.info/sitemap.xml
