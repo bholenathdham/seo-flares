@@ -1,0 +1,756 @@
+/* ==========================================================================
+   SEO Flares - Services Page Dark Theme (Elite Agency Edition)
+   ========================================================================== */
+
+body.services-page {
+  background-color: #070a12 !important;
+  color: #f3f4f6 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ==========================================
+   0. Global Container
+   ========================================== */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   1. Ambient Glowing Background Orbs
+   ========================================== */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.glow-1 {
+  width: 600px;
+  height: 600px;
+  background: #6c3df5;
+  top: 0px;
+  left: 20%;
+  animation: pulseGlow 8s ease-in-out infinite alternate;
+}
+
+.glow-2 {
+  width: 500px;
+  height: 500px;
+  background: #00d2ff;
+  top: 20%;
+  right: 15%;
+  animation: pulseGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1) translateY(0); opacity: 0.2; }
+  100% { transform: scale(1.12) translateY(-25px); opacity: 0.35; }
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================
+   2. Animations & Floating Effects
+   ========================================== */
+@keyframes fadeInSlideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatMockup {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-fade-in {
+  animation: fadeInSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: floatMockup 6s ease-in-out infinite;
+}
+
+/* ==========================================
+   3. Elite Hero & Live Interface Mockup
+   ========================================== */
+.page-hero {
+  position: relative;
+  padding: 90px 0 70px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 0%, rgba(108, 61, 245, 0.18) 0%, transparent 70%);
+}
+
+.page-hero .breadcrumb {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #bfa8ff;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.15;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero p {
+  font-size: 1.15rem;
+  color: #a3b1cc;
+  max-width: 680px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+/* Elite Dashboard / Browser Preview Mockup */
+.hero-mockup {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #090d19;
+  border: 1px solid rgba(157, 124, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 50px rgba(108, 61, 245, 0.22);
+  overflow: hidden;
+  text-align: left;
+}
+
+.mockup-header {
+  background: #050811;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mockup-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mockup-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.mockup-header .red { background: #ff5f56; }
+.mockup-header .yellow { background: #ffbd2e; }
+.mockup-header .green { background: #27c93f; }
+
+.mockup-url {
+  font-size: 12px;
+  color: #bfa8ff;
+  font-family: monospace;
+  background: rgba(108, 61, 245, 0.15);
+  padding: 4px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(157, 124, 255, 0.25);
+  margin-left: 12px;
+}
+
+.mockup-status {
+  font-size: 11px;
+  color: #27c93f;
+  background: rgba(39, 201, 63, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(39, 201, 63, 0.3);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mockup-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #27c93f;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #27c93f;
+}
+
+.mockup-body {
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.mock-terminal {
+  background: #04060d;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 13px;
+  color: #9fa8bd;
+  line-height: 1.7;
+}
+
+.mock-terminal .code-keyword { color: #bfa8ff; }
+.mock-terminal .code-string { color: #51cf66; }
+.mock-terminal .code-prop { color: #339af0; }
+.mock-terminal .code-comment { color: #5c6784; font-style: italic; }
+
+.mock-metrics-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mock-metric-card {
+  background: rgba(108, 61, 245, 0.08);
+  border: 1px solid rgba(157, 124, 255, 0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.2s ease;
+}
+
+.mock-metric-card:hover {
+  border-color: rgba(157, 124, 255, 0.4);
+}
+
+.mock-metric-card .label {
+  font-size: 13.5px;
+  color: #9fa8bd;
+  font-weight: 500;
+}
+
+.mock-metric-card .val {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ==========================================
+   4. Sections & Cards Grid Design
+   ========================================== */
+.section {
+  padding: 95px 0;
+}
+
+.section.alt {
+  background: rgba(17, 22, 37, 0.5);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(157, 124, 255, 0.1);
+  border-bottom: 1px solid rgba(157, 124, 255, 0.1);
+}
+
+.section-header-centered {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 60px;
+}
+
+.section-header-centered h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-top: 16px;
+  letter-spacing: -0.02em;
+}
+
+.section-header-centered p {
+  color: #9fa8bd;
+  margin-top: 12px;
+  font-size: 1.05rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #bfa8ff;
+  background: rgba(108, 61, 245, 0.18);
+  border: 1px solid rgba(157, 124, 255, 0.3);
+  border-radius: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: rgba(17, 22, 37, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(157, 124, 255, 0.15);
+  border-radius: 20px;
+  padding: 38px 32px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(157, 124, 255, 0.5);
+  box-shadow: 0 22px 45px rgba(108, 61, 245, 0.25);
+}
+
+.card .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, rgba(108, 61, 245, 0.28), rgba(35, 45, 76, 0.7));
+  border: 1px solid rgba(157, 124, 255, 0.35);
+  color: #bfa8ff;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.card p {
+  color: #9fa8bd;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Featured Tier Highlight */
+.featured-tier {
+  border-color: rgba(157, 124, 255, 0.5) !important;
+  box-shadow: 0 20px 50px rgba(108, 61, 245, 0.2) !important;
+  transform: translateY(-4px);
+}
+
+.popular-badge {
+  position: absolute;
+  right: 28px;
+  background: linear-gradient(135deg, #6c3df5, #9d7cff);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(108, 61, 245, 0.4);
+}
+
+.stats-section .card {
+  background: rgba(11, 15, 25, 0.8);
+  text-align: center;
+}
+
+.stats-section .card strong {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 30%, #bfa8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.process-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.process-cards-grid .card {
+  background: rgba(11, 15, 25, 0.8);
+}
+
+.card .step-num {
+  font-size: 13px;
+  font-weight: 800;
+  color: #bfa8ff;
+  background: rgba(108, 61, 245, 0.18);
+  border: 1px solid rgba(157, 124, 255, 0.3);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   5. Split Section & Metrics
+   ========================================== */
+.split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.split h2 {
+  font-size: 2.3rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.split p {
+  color: #9fa8bd;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.checks {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
+}
+
+.checks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.checks .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(108, 61, 245, 0.22);
+  color: #bfa8ff;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid rgba(157, 124, 255, 0.35);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checks b {
+  color: #ffffff;
+  font-size: 15.5px;
+}
+
+.checks small {
+  color: #9fa8bd;
+  font-size: 13.5px;
+  display: block;
+  margin-top: 3px;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.metric {
+  background: rgba(17, 22, 37, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(157, 124, 255, 0.18);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.metric strong {
+  display: block;
+  font-size: 2.8rem;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 30%, #bfa8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metric span {
+  font-size: 14px;
+  color: #9fa8bd;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+  display: block;
+}
+
+/* ==========================================
+   6. Call to Action Box
+   ========================================== */
+.cta {
+  padding: 95px 0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, rgba(17, 22, 37, 0.9) 0%, rgba(26, 32, 56, 0.9) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(157, 124, 255, 0.35);
+  border-radius: 24px;
+  padding: 64px 40px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+.cta-box h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.cta-box p {
+  color: #9fa8bd;
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================
+   7. Footer Alignment
+   ========================================== */
+footer {
+  background: #05070c;
+  border-top: 1px solid rgba(157, 124, 255, 0.15);
+  padding: 80px 0 30px;
+  color: #9fa8bd;
+}
+
+footer .footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+footer .footer-brand p {
+  margin-top: 15px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #9fa8bd;
+  max-width: 320px;
+}
+
+footer h4 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+footer a {
+  display: block;
+  color: #9fa8bd;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #bfa8ff;
+}
+
+footer .copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+  color: #7c859e;
+}
+
+/* ==========================================
+   8. Elite Bento Grid & Interactive Additions
+   ========================================== */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.bento-card {
+  background: rgba(17, 22, 37, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(157, 124, 255, 0.18);
+  border-radius: 24px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(157, 124, 255, 0.45);
+  box-shadow: 0 25px 50px rgba(108, 61, 245, 0.2);
+}
+
+.bento-card.wide {
+  grid-column: span 1;
+}
+
+.bento-card.tall {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bento-image-wrapper {
+  margin-top: 24px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(157, 124, 255, 0.25);
+  background: #050811;
+  position: relative;
+}
+
+.bento-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover .bento-image-wrapper img {
+  transform: scale(1.03);
+}
+
+.roi-calculator {
+  margin-top: 20px;
+  background: rgba(5, 8, 17, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.roi-slider-group {
+  margin-bottom: 16px;
+}
+
+.roi-slider-group label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  color: #9fa8bd;
+  margin-bottom: 8px;
+}
+
+.roi-slider-group label span {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.roi-slider-group input[type="range"] {
+  width: 100%;
+  accent-color: #6c3df5;
+  cursor: pointer;
+}
+
+.roi-output-box {
+  background: rgba(108, 61, 245, 0.12);
+  border: 1px solid rgba(157, 124, 255, 0.3);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.roi-output-box .roi-label {
+  font-size: 12px;
+  color: #bfa8ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.roi-output-box .roi-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 2px;
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================
+   9. Responsive Adjustments
+   ========================================== */
+@media (max-width: 1024px) {
+  .process-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
+  .mockup-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .cards, .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .split {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards, .process-cards-grid, .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  footer .copyright {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .cta-box {
+    padding: 45px 20px;
+  }
+  .hero-mockup {
+    display: none;
+  }
+}
+
+

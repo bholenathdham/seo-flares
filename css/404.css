@@ -1,0 +1,411 @@
+/* =========================================================
+   SEO FLARES — PREMIUM 404 PAGE
+   ========================================================= */
+
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.error-main {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.error-hero {
+  position: relative;
+  width: 100%;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(108, 61, 245, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(108, 61, 245, 0.07),
+      transparent 28%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+   ========================================================= */
+
+.error-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.error-glow-one {
+  width: 360px;
+  height: 360px;
+  top: 12%;
+  left: 8%;
+  background: rgba(108, 61, 245, 0.08);
+}
+
+.error-glow-two {
+  width: 300px;
+  height: 300px;
+  right: 8%;
+  bottom: 8%;
+  background: rgba(108, 61, 245, 0.07);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.error-content {
+  position: relative;
+  width: min(900px, 90%);
+  margin: 0 auto;
+  padding: 90px 0;
+  text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.error-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: #7b849b;
+}
+
+
+/* =========================================================
+   404 NUMBER
+   ========================================================= */
+
+.error-code {
+  margin: 0;
+
+  font-size: clamp(120px, 19vw, 250px);
+  line-height: 0.82;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 5%,
+      #b9a7ff 42%,
+      #6c3df5 75%,
+      #4b20c9 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow:
+    0 20px 70px rgba(108, 61, 245, 0.14);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.error-content h1 {
+  margin: 34px 0 14px;
+
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.error-description {
+  width: min(620px, 100%);
+  margin: 0 auto;
+
+  font-size: 17px;
+  line-height: 1.75;
+
+  color: #8e96aa;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.error-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 34px;
+}
+
+
+.error-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 52px;
+  padding: 0 24px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.error-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Primary */
+
+.error-btn-primary {
+  color: #ffffff;
+  background: #6c3df5;
+
+  box-shadow:
+    0 12px 35px rgba(108, 61, 245, 0.24);
+}
+
+
+.error-btn-primary:hover {
+  background: #5b2fe0;
+
+  box-shadow:
+    0 16px 42px rgba(108, 61, 245, 0.32);
+}
+
+
+.error-btn-primary span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+/* Secondary */
+
+.error-btn-secondary {
+  color: #dce1ed;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.error-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   SECONDARY LINKS
+   ========================================================= */
+
+.error-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 30px;
+
+  font-size: 13px;
+  color: #626b80;
+}
+
+
+.error-links a {
+  color: #8f98ad;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+
+.error-links a:hover {
+  color: #ffffff;
+}
+
+
+.error-links span[aria-hidden="true"] {
+  color: #454c5c;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.error-page .site-footer {
+  position: relative;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+  .error-hero {
+    min-height: 620px;
+  }
+
+  .error-content {
+    padding: 75px 0;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .error-hero {
+    min-height: 560px;
+  }
+
+  .error-content {
+    width: min(92%, 600px);
+    padding: 65px 0;
+  }
+
+  .error-eyebrow {
+    margin-bottom: 20px;
+    font-size: 11px;
+    letter-spacing: 0.11em;
+  }
+
+  .error-code {
+    font-size: clamp(105px, 31vw, 165px);
+  }
+
+  .error-content h1 {
+    margin-top: 28px;
+    font-size: 32px;
+  }
+
+  .error-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .error-btn {
+    width: min(100%, 300px);
+  }
+
+  .error-links {
+    margin-top: 25px;
+    line-height: 1.8;
+  }
+
+  .error-glow-one {
+    width: 240px;
+    height: 240px;
+    left: -80px;
+  }
+
+  .error-glow-two {
+    width: 220px;
+    height: 220px;
+    right: -80px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .error-hero {
+    min-height: 520px;
+  }
+
+  .error-content {
+    padding: 55px 0;
+  }
+
+  .error-code {
+    font-size: 108px;
+  }
+
+  .error-content h1 {
+    font-size: 29px;
+  }
+
+  .error-description {
+    font-size: 14px;
+  }
+
+}
