@@ -3717,7 +3717,7 @@ main .why-card p{
 .real-projects .project{background:#111 !important;}
 .real-projects .project-visual{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;transform:scale(1.01);transition:transform .7s ease,filter .7s ease;}
 .real-projects .project-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,11,26,.02) 18%,rgba(7,9,22,.25) 46%,rgba(7,9,22,.88) 100%);}
-.real-ek .project-visual{background-image:url('https://eksankalp.xyz/images/home/astha-ka-ek-sankalp-cover.webp');}
+.real-ek .project-visual{background-image:url('https://eksankalp.xyz/images/home/ek-sankalp-premium.webp');}
 .real-bd .project-visual{background-image:url('https://raw.githubusercontent.com/bholenathdham/media/main/assets/temple6.jpg');}
 .real-rs .project-visual{background-image:url('https://bholenathdham.in/images/stories/bholenath-dham-mandir-01.webp');}
 .real-seo .project-visual{background:radial-gradient(circle at 80% 15%,rgba(111,79,255,.65),transparent 28%),linear-gradient(135deg,#12152f,#4a2cc9 55%,#ed4b9a);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;}
