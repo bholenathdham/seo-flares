@@ -3717,9 +3717,9 @@ main .why-card p{
 .real-projects .project{background:#111 !important;}
 .real-projects .project-visual{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;transform:scale(1.01);transition:transform .7s ease,filter .7s ease;}
 .real-projects .project-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,11,26,.02) 18%,rgba(7,9,22,.25) 46%,rgba(7,9,22,.88) 100%);}
-.real-ek .project-visual{background-image:url('https://eksankalp.xyz/images/home/ek-sankalp-premium.webp');}
-.real-bd .project-visual{background-image:url('https://raw.githubusercontent.com/bholenathdham/media/main/assets/temple6.jpg');}
-.real-rs .project-visual{background-image:url('https://bholenathdham.in/images/bholenath-dham-mandir-01.webp');}
+.real-ek .project-visual{background-image:url('');}
+.real-bd .project-visual{background-image:url('');}
+.real-rs .project-visual{background-image:url('');}
 .real-seo .project-visual{background:radial-gradient(circle at 80% 15%,rgba(111,79,255,.65),transparent 28%),linear-gradient(135deg,#12152f,#4a2cc9 55%,#ed4b9a);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;}
 .real-seo .project-visual:after{background:linear-gradient(180deg,rgba(7,8,24,.05),rgba(7,8,24,.68));}
 .real-seo .project-visual span{position:relative;z-index:2;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-.05em;}
@@ -3738,9 +3738,9 @@ main .why-card p{
 .real-projects .project{background:#111 !important;}
 .real-projects .project-visual{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;transform:scale(1.01);transition:transform .7s ease,filter .7s ease;}
 .real-projects .project-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,11,26,.02) 18%,rgba(7,9,22,.25) 46%,rgba(7,9,22,.88) 100%);}
-.real-ek .project-visual{background-image:url('https://eksankalp.xyz/images/stories/astha-ka-ek-sankalp-cover.webp');}
-.real-bd .project-visual{background-image:url('https://raw.githubusercontent.com/bholenathdham/media/main/assets/temple6.jpg');}
-.real-rs .project-visual{background-image:url('https://bholenathdham.in/images/stories/bholenath-dham-mandir-01.webp');}
+.real-ek .project-visual{background-image:url('');}
+.real-bd .project-visual{background-image:url('');}
+.real-rs .project-visual{background-image:url('');}
 .real-seo .project-visual{background:radial-gradient(circle at 80% 15%,rgba(111,79,255,.65),transparent 28%),linear-gradient(135deg,#12152f,#4a2cc9 55%,#ed4b9a);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;}
 .real-seo .project-visual:after{background:linear-gradient(180deg,rgba(7,8,24,.05),rgba(7,8,24,.68));}
 .real-seo .project-visual span{position:relative;z-index:2;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-.05em;}
@@ -3935,12 +3935,12 @@ main .why-card p{
 
 /* Large editorial case study gets a little more visual breathing room. */
 .work-premium .real-ek .project-visual{
-  background-image:url('../assets/ek-sankalp-cover.webp') !important;
+  background-image:url('') !important;
   background-position:center !important;
 }
 /* Use the real temple image, but contain it inside the preview rather than washing the whole card. */
 .work-premium .real-bd .project-visual{
-  background-image:url('https://bholenathdham.in/images/temple1.webp') !important;
+  background-image:url('') !important;
   background-position:center 46% !important;
 }
 /* SEO Flares preview remains a clean browser-style composition. */
@@ -3949,7 +3949,7 @@ main .why-card p{
   background-position:center !important;
 }
 .work-premium .real-rs .project-visual{
-  background-image:url('https://bholenathdham.in/images/temple8.webp') !important;
+  background-image:url('') !important;
   background-position:center 43% !important;
 }
 
