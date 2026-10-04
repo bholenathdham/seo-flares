@@ -1,48 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://seoflares.info/</loc>
+       <loc>https://seoflares.info/</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>1.0000</priority>
   </url>
-
   <url>
-    <loc>https://seoflares.info/about.html</loc>
+       <loc>https://seoflares.info/services.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
   <url>
-    <loc>https://seoflares.info/services.html</loc>
+       <loc>https://seoflares.info/web-design.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
   <url>
-    <loc>https://seoflares.info/portfolio.html</loc>
+       <loc>https://seoflares.info/seo.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
   <url>
-    <loc>https://seoflares.info/seo.html</loc>
+       <loc>https://seoflares.info/portfolio.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
- <url>
-    <loc>https://seoflares.info/seo-service-details.html</loc>
-  </url> 
-
   <url>
-    <loc>https://seoflares.info/web-design.html</loc>
+       <loc>https://seoflares.info/about.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
   <url>
-    <loc>https://seoflares.info/web-design-details.html</loc>
+       <loc>https://seoflares.info/contact.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
   <url>
-    <loc>https://seoflares.info/contact.html</loc>
+       <loc>https://seoflares.info/privacy-policy.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
   <url>
-    <loc>https://seoflares.info/privacy-policy.html</loc>
+       <loc>https://seoflares.info/terms.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
-
   <url>
-    <loc>https://seoflares.info/terms.html</loc>
+       <loc>https://seoflares.info/web-design-details.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.6400</priority>
   </url>
-
+  <url>
+       <loc>https://seoflares.info/seo-service-details.html</loc>
+       <lastmod>2026-10-04T20:53:52+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
 </urlset>
