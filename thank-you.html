@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Thank You | SEO Flares</title>
+
+<meta
+  name="description"
+  content="Thank you for contacting SEO Flares. We've received your project enquiry and will be in touch soon."
+>
+
+<meta name="theme-color" content="#6c3df5">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/head-footer.css">
+<link rel="stylesheet" href="css/contact.css">
+<meta name="robots" content="noindex, follow">
+<style>
+/* =========================================================
+   SEO FLARES — THANK YOU PAGE
+   ========================================================= */
+
+body.thank-you-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.thank-you-page main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.thank-you-page .thank-you-section {
+  width: 100%;
+  padding: 100px 0;
+}
+
+.thank-you-page .thank-you-inner {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thank-you-page .thank-you-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  color: #6c3df5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.thank-you-page .thank-you-label::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: #6c3df5;
+}
+
+.thank-you-page .thank-you-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(108, 61, 245, 0.08);
+  color: #6c3df5;
+  font-size: 27px;
+  font-weight: 700;
+  box-shadow:
+    0 0 0 10px rgba(108, 61, 245, 0.035);
+}
+
+.thank-you-page h1 {
+  margin: 0;
+  font-size: clamp(50px, 7vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.thank-you-page h1 em {
+  font-style: normal;
+  color: #6c3df5;
+}
+
+.thank-you-page .thank-you-text {
+  max-width: 650px;
+  margin: 30px auto 0;
+  color: #697286;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.thank-you-page .thank-you-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.thank-you-page .thank-you-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 54px;
+  padding: 0 25px;
+  border-radius: 11px;
+  background: #6c3df5;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 12px 30px rgba(108, 61, 245, 0.2);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.thank-you-page .thank-you-button:hover {
+  background: #5d31e4;
+  transform: translateY(-2px);
+  box-shadow: 0 17px 35px rgba(108, 61, 245, 0.27);
+}
+
+.thank-you-page .thank-you-button span {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.thank-you-page .thank-you-button:hover span {
+  transform: translateX(4px);
+}
+
+.thank-you-page .thank-you-button.secondary {
+  background: transparent;
+  color: #252a3a;
+  border: 1px solid #dfe2e9;
+  box-shadow: none;
+}
+
+.thank-you-page .thank-you-button.secondary:hover {
+  background: #fff;
+  border-color: #c9cdd8;
+  box-shadow: 0 8px 25px rgba(25, 20, 60, 0.06);
+}
+
+.thank-you-page .thank-you-note {
+  margin-top: 28px;
+  color: #9a9fac;
+  font-size: 11px;
+}
+
+/* Ambient glow */
+
+.thank-you-page::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top: -220px;
+  right: -180px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(108, 61, 245, 0.13),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.thank-you-page::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  bottom: -220px;
+  left: -180px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(108, 61, 245, 0.08),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .thank-you-page .thank-you-section {
+    padding: 70px 0;
+  }
+
+  .thank-you-page .thank-you-inner {
+    max-width: 100%;
+  }
+
+  .thank-you-page h1 {
+    font-size: clamp(44px, 13vw, 64px);
+  }
+
+  .thank-you-page .thank-you-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .thank-you-page .thank-you-actions {
+    flex-direction: column;
+  }
+
+  .thank-you-page .thank-you-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+</style>
+
+</head>
+
+<body class="homepage-premium-v40 thank-you-page">
+
+<div class="ambient-glow glow-1"></div>
+<div class="ambient-glow glow-2"></div>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<div class="topbar">
+  <div class="container">
+    <span>✦ Strategy-led web design & enterprise SEO</span>
+    <span>Available for high-impact projects worldwide</span>
+  </div>
+</div>
+
+
+<header class="site-header-premium">
+
+  <div class="container nav">
+
+    <a class="logo" href="index.html">
+      <span class="logo-mark"></span>
+      SEO <span style="color:#6c3df5">FLARES</span>
+    </a>
+
+    <nav class="navlinks">
+
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="web-design.html">Web Design</a>
+      <a href="seo.html">SEO</a>
+      <a href="portfolio.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+
+    </nav>
+
+    <a class="btn btn-primary" href="contact.html">
+      Let's Talk →
+    </a>
+
+    <button class="menu" aria-label="Open menu">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     THANK YOU
+     ===================================================== -->
+
+<main>
+
+  <section class="thank-you-section">
+
+    <div class="container">
+
+      <div class="thank-you-inner">
+
+        <span class="thank-you-label">
+          Enquiry received
+        </span>
+
+        <div class="thank-you-icon">
+          ✓
+        </div>
+
+        <h1>
+          Thank you for
+          <em>reaching out</em>
+        </h1>
+
+        <p class="thank-you-text">
+          We've received your project enquiry and appreciate
+          you taking the time to tell us about it. We'll review
+          the details carefully and get back to you soon.
+        </p>
+
+        <div class="thank-you-actions">
+
+          <a
+            class="thank-you-button"
+            href="index.html"
+          >
+            Back to home
+            <span>→</span>
+          </a>
+
+          <a
+            class="thank-you-button secondary"
+            href="portfolio.html"
+          >
+            Explore our work
+          </a>
+
+        </div>
+
+        <p class="thank-you-note">
+          SEO Flares · Web Design · Development · SEO
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="site-footer-premium">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <a class="logo" href="index.html">
+          <span class="logo-mark"></span>
+          SEO FLARES
+        </a>
+
+        <p>
+          Colourful digital experiences, high-performance web
+          engineering, and dominant search visibility built
+          for ambitious brands.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <a href="services.html">Services</a>
+        <a href="web-design.html">Web Design</a>
+        <a href="seo.html">SEO</a>
+        <a href="portfolio.html">Portfolio</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Company</h4>
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html#process">Our Process</a>
+        <a href="index.html#faq">FAQ</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Start a project</h4>
+
+        <p style="color:#9fa8bd">
+          Tell us what you want to build and we'll shape
+          the right technical roadmap.
+        </p>
+
+        <a
+          class="btn btn-primary"
+          style="margin-top:15px"
+          href="contact.html"
+        >
+          Get a proposal →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      <span>
+        © <span data-year></span> SEO Flares.
+        All rights reserved.
+      </span>
+      <div class="footer-legal-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <span aria-hidden="true">·</span>
+    <a href="terms.html">Terms &amp; Conditions</a>
+  </div>
+      <span>
+        Web Design · Development · SEO
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
