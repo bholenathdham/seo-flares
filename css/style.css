@@ -4667,7 +4667,7 @@ body.homepage-premium-v40 .hero-proof div{border-color:rgba(255,255,255,.09)!imp
 body.homepage-premium-v40 .hero-proof strong{color:#fff!important}.homepage-premium-v40 .hero-proof span{color:#929ab1!important}.homepage-premium-v40 .hero-proof b{color:#ad91ff!important}
 body.homepage-premium-v40 .hero-art-large.hero-art-refined{
   min-height:520px;max-width:610px;border-radius:34px;overflow:hidden;
-  background-image:url('../assets/hero-visual-premium.png');background-size:166% auto;background-position:100% 50%;background-repeat:no-repeat;
+  background-image:url('../assets/hero-right-premium.webp');background-size:166% auto;background-position:100% 50%;background-repeat:no-repeat;
   border:1px solid rgba(255,255,255,.11);box-shadow:0 35px 100px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.10);
 }
 body.homepage-premium-v40 .hero-art-large.hero-art-refined:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,19,.08),transparent 52%,rgba(8,10,19,.08));pointer-events:none}
