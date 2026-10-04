@@ -223,48 +223,97 @@
   </section>
 
   <!-- Elite Bento Grid Section (Assets & Interactive Simulator) -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header-centered reveal-on-scroll">
-        <span class="pill">Next-Gen Capabilities</span>
-        <h2>Engineered for Absolute SERP Dominance</h2>
-        <p>Combining high-performance visual assets from your assets folder with real-time growth calculations.</p>
-      </div>
-
-      <div class="bento-grid">
-        <!-- Bento Card 1: Asset Image Showcase -->
-        <div class="bento-card tall reveal-on-scroll">
-          <div>
-            <span class="step-num">01</span>
-           <h3 style="color:#fff;">Visual Asset Integration</h3>
-            <p>Seamlessly showcasing high-impact graphic previews straight from your local assets repository.</p>
-          </div>
-          <div class="bento-image-wrapper">
-            <!-- Ensure your image filename matches what is inside your assets folder -->
-            <img src="assets/hero-preview.png" alt="SEO Flares Interface Preview" loading="lazy">
-          </div>
-        </div>
-
-        <!-- Bento Card 2: Interactive ROI Estimator -->
-        <div class="bento-card wide reveal-on-scroll">
-          <span class="step-num">02</span>
-          <h3 style="color:#fff;">Live Growth Simulator</h3>
-          <p>Estimate the organic revenue scaling power of seoflares.info based on your current volume.</p>
-          
-          <div class="roi-calculator">
-            <div class="roi-slider-group">
-              <label>Monthly Traffic Baseline: <span id="trafficVal">15,000</span> visits</label>
-              <input type="range" id="trafficSlider" min="1000" max="100000" step="1000" value="15000" oninput="updateROI()">
-            </div>
-            <div class="roi-output-box">
-              <span class="roi-label">Projected Annual Revenue Lift</span>
-              <div class="roi-value" id="roiOutput">$142,500+</div>
-            </div>
-          </div>
-        </div>
-      </div>
+<section class="section">
+  <div class="container">
+    <div class="section-header-centered reveal-on-scroll">
+      <span class="pill">Next-Gen Capabilities</span>
+      <h2>Engineered for Absolute SERP Dominance</h2>
+      <p>Combining high-performance visual assets from your assets folder with an interactive organic growth scenario.</p>
     </div>
-  </section>
+
+    <div class="bento-grid">
+
+      <!-- Bento Card 1: Asset Image Showcase -->
+      <div class="bento-card tall reveal-on-scroll">
+
+  <div>
+    <span class="step-num">01</span>
+    <h3>Performance-Driven Design</h3>
+    <p>
+      High-impact digital experiences built with clean structure,
+      thoughtful visuals and performance in mind.
+    </p>
+  </div>
+
+  <div class="bento-image-wrapper">
+    <img
+      src="assets/hero-preview.png"
+      alt="SEO Flares performance-driven website design preview"
+      loading="lazy"
+    >
+  </div>
+
+</div>
+
+
+      <!-- Bento Card 2: Interactive Growth Simulator -->
+      <div class="bento-card wide reveal-on-scroll">
+
+        <span class="step-num">02</span>
+
+        <h3>Live Growth Simulator</h3>
+
+        <p>
+          Explore an illustrative annual organic traffic growth scenario
+          based on your current monthly visitor volume.
+        </p>
+
+        <div class="roi-calculator">
+
+          <div class="roi-slider-group">
+
+            <label>
+              Monthly Traffic Baseline:
+              <span id="trafficVal">5,000</span> visits
+            </label>
+
+            <input
+              type="range"
+              id="trafficSlider"
+              min="1000"
+              max="50000"
+              step="1000"
+              value="5000"
+              oninput="updateROI()"
+            >
+
+          </div>
+
+          <div class="roi-output-box">
+
+            <span class="roi-label">
+              Potential Additional Traffic
+            </span>
+
+            <p>
+              Illustrative 10% growth scenario.</p> <p>Actual results vary
+              by search visibility, traffic quality, competition,
+              conversion behaviour and other factors.
+            </p>
+
+            <div class="roi-value" id="roiOutput">
+              500+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- Premium Tier Breakdown Section -->
   <section class="section alt">
@@ -458,10 +507,17 @@
 <!-- Interactive ROI Calculator Script -->
 <script>
   function updateROI() {
-    const traffic = document.getElementById('trafficSlider').value;
-    document.getElementById('trafficVal').innerText = Number(traffic).toLocaleString();
-    const estimatedLift = Math.round(traffic * 9.5);
-    document.getElementById('roiOutput').innerText = '$' + estimatedLift.toLocaleString() + '+';
+    const traffic = Number(
+      document.getElementById('trafficSlider').value
+    );
+
+    document.getElementById('trafficVal').innerText =
+      traffic.toLocaleString();
+
+    const additionalTraffic = Math.round(traffic * 0.10);
+
+    document.getElementById('roiOutput').innerText =
+      additionalTraffic.toLocaleString() + '+';
   }
 </script>
 <script src="js/main.js"></script>
