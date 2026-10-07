@@ -31,3 +31,95 @@ if(grid){properties.forEach(p=>{
   card.innerHTML=`<div class="property-image-wrap"><img src="${p[4]}" alt="${p[0]}" loading="lazy"><span class="property-location">⌂ ${p[1]}</span><span class="property-status">For Sale</span></div><div class="property-card-content"><h3>${p[0]}</h3><div class="card-details"><span>▧ ${p[6]}</span><span>⌖ ${p[1]}</span></div><p>${p[5]}</p><div class="card-bottom"><span class="card-enquire">View Project</span><span class="round-arrow">→</span></div></div>`;
   grid.appendChild(card);
 });}
+
+/* ================================
+   MOBILE NAVIGATION
+================================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".aa-menu");
+    const nav = document.querySelector(".aa-navlinks");
+
+    if (!menuButton || !nav) return;
+
+    // Open / close mobile menu
+    menuButton.addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        nav.classList.toggle("mobile-open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            nav.classList.contains("mobile-open") ? "true" : "false"
+        );
+    });
+
+    // Mobile dropdown buttons
+    const dropdownButtons = nav.querySelectorAll(".aa-dropdown > button");
+
+    dropdownButtons.forEach(function (button) {
+        button.addEventListener("click", function (e) {
+            // Only use click behavior on mobile
+            if (window.innerWidth > 900) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            const dropdown = button.parentElement;
+
+            // Close other dropdowns
+            nav.querySelectorAll(".aa-dropdown.open").forEach(function (item) {
+                if (item !== dropdown) {
+                    item.classList.remove("open");
+                }
+            });
+
+            dropdown.classList.toggle("open");
+        });
+    });
+
+    // Close menu when a normal navigation link is clicked
+    nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            if (window.innerWidth <= 900) {
+                nav.classList.remove("mobile-open");
+
+                nav.querySelectorAll(".aa-dropdown.open").forEach(function (item) {
+                    item.classList.remove("open");
+                });
+
+                menuButton.setAttribute("aria-expanded", "false");
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+        if (
+            window.innerWidth <= 900 &&
+            nav.classList.contains("mobile-open") &&
+            !nav.contains(e.target) &&
+            !menuButton.contains(e.target)
+        ) {
+            nav.classList.remove("mobile-open");
+            menuButton.setAttribute("aria-expanded", "false");
+
+            nav.querySelectorAll(".aa-dropdown.open").forEach(function (item) {
+                item.classList.remove("open");
+            });
+        }
+    });
+
+    // Reset mobile state when returning to desktop
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) {
+            nav.classList.remove("mobile-open");
+
+            nav.querySelectorAll(".aa-dropdown.open").forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+            menuButton.setAttribute("aria-expanded", "false");
+        }
+    });
+});
