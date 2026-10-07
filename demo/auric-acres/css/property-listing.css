@@ -18,3 +18,189 @@
 .footer{background:#08111d;color:#dfe3e6;padding:68px 6vw 22px}.footer-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:1.35fr .8fr .9fr 1.1fr;gap:50px}.footer-logo{font:600 24px var(--ui);letter-spacing:.1em;color:#fff}.footer-logo small{display:block;font:500 10px var(--ui);letter-spacing:.22em;color:#bda979;margin-top:5px}.footer p{color:#aeb7c0;font-size:15px;line-height:1.75}.footer h3{font:600 11px var(--ui);letter-spacing:.16em;text-transform:uppercase;color:#c4a86e}.footer-links a{display:block;color:#cfd5da;font:400 14px var(--ui);padding:5px 0}.footer-links a:hover{color:#d6ba7a}.footer-bottom{max-width:1280px;margin:48px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;color:#89939d;font:400 11px var(--ui)}
 @media(max-width:900px){.aa-top{height:auto;min-height:46px;padding:8px 5vw;gap:8px;flex-direction:column;text-align:center;font-size:11px}.aa-nav{padding:0 5vw;min-height:76px}.aa-navlinks{display:none}.aa-menu{display:block;background:none;border:0;color:#fff;font-size:25px}.property-hero-inner{grid-template-columns:1fr;padding-top:62px}.hero-image-wrap{order:-1}.facts,.price-grid{grid-template-columns:1fr 1fr}.amenities-layout{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column}}
 @media(max-width:600px){body{font-size:16px}.aa-brand .logo-name{font-size:20px}.property-hero-inner{padding:48px 5vw 58px}.property-hero h1{font-size:50px}.hero-lead{font-size:18px}.facts,.price-grid{grid-template-columns:1fr}.section{padding:62px 5vw}.section-head{margin-bottom:32px}.section-head p,.amenities-copy p,.location-copy{font-size:16px}.visual-block{margin-bottom:34px}.map-wrap{padding:5px}.map-wrap iframe{height:390px}.footer{padding:52px 5vw 18px}.footer-grid{grid-template-columns:1fr}.footer-bottom{margin-top:35px}.contact-cta{padding:55px 5vw}.contact-cta p{font-size:17px}}
+
+
+/* =========================================================
+   MOBILE NAV — PROPERTY LISTING PAGE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  /* Hamburger */
+  .aa-menu {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1002;
+    cursor: pointer;
+  }
+
+  /* Main mobile menu */
+  .aa-navlinks {
+    display: none !important;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 18px;
+    gap: 4px;
+
+    background: rgba(12, 14, 22, 0.98);
+    border: 1px solid rgba(255,255,255,.10);
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
+
+    z-index: 1001;
+    box-sizing: border-box;
+  }
+
+  .aa-navlinks.mobile-open {
+    display: flex !important;
+  }
+
+  /* Main navigation items */
+  .aa-navlinks > a,
+  .aa-navlinks > button,
+  .aa-navlinks > .aa-dropdown > button {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between !important;
+
+    padding: 12px 14px;
+
+    color: #fff !important;
+    background: transparent;
+    border: 0;
+
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  /* Main dropdown arrows: About / India / Dubai / Services */
+  .aa-navlinks > .aa-dropdown > button > span {
+    margin-left: auto !important;
+    padding-left: 20px;
+    flex-shrink: 0;
+  }
+
+  /* Dropdown containers */
+  .aa-navlinks .aa-dropdown {
+    width: 100%;
+    position: relative;
+  }
+
+  /* Submenus */
+  .aa-navlinks .aa-dropdown .aa-menu-panel,
+  .aa-navlinks .aa-dropdown .aa-menu-panel.wide {
+    position: static !important;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    display: none !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 8px 8px 10px !important;
+
+    background: rgba(255,255,255,.045);
+    border: 0;
+    box-shadow: none;
+
+    box-sizing: border-box;
+  }
+
+  .aa-navlinks .aa-dropdown.open .aa-menu-panel {
+    display: block !important;
+  }
+
+  /* Wide menus become one column */
+  .aa-navlinks .aa-dropdown .aa-menu-panel.wide {
+    grid-template-columns: 1fr !important;
+  }
+
+  .aa-navlinks .aa-dropdown .aa-menu-panel.wide > div {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Individual submenu links */
+  .aa-navlinks .aa-dropdown .aa-menu-panel a {
+    position: relative;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between !important;
+
+    width: 100% !important;
+    min-height: 40px;
+
+    padding: 10px 14px !important;
+
+    color: rgba(255,255,255,.82) !important;
+    background: transparent;
+
+    font-size: 14px;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    white-space: normal !important;
+  }
+
+  /* Create the submenu arrow */
+  .aa-navlinks .aa-dropdown .aa-menu-panel a::after {
+    content: "→";
+
+    display: block;
+    margin-left: auto;
+    padding-left: 20px;
+
+    color: rgba(255,255,255,.65);
+    font-size: 14px;
+    line-height: 1;
+
+    flex-shrink: 0;
+  }
+
+  .aa-navlinks .aa-dropdown .aa-menu-panel a:hover {
+    background: rgba(255,255,255,.05);
+    color: #fff !important;
+  }
+
+  /* Dropdown headings */
+  .aa-navlinks .aa-dropdown .aa-menu-panel b {
+    display: block;
+
+    width: 100%;
+    padding: 10px 14px 6px !important;
+
+    color: rgba(255,255,255,.42);
+    font-size: 10px;
+    letter-spacing: .14em;
+
+    box-sizing: border-box;
+  }
+
+  .aa-lang {
+    margin-top: 6px;
+  }
+}
