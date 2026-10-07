@@ -32,94 +32,165 @@ if(grid){properties.forEach(p=>{
   grid.appendChild(card);
 });}
 
-/* ================================
-   MOBILE NAVIGATION
-================================ */
+/* =========================================================
+   AURIC ACRES — UNIVERSAL NAVIGATION
+   Works on homepage + all property/listing pages
+   ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
+
     const menuButton = document.querySelector(".aa-menu");
     const nav = document.querySelector(".aa-navlinks");
 
+    /* -----------------------------------------------------
+       If this page does not have the navigation, do nothing
+       ----------------------------------------------------- */
     if (!menuButton || !nav) return;
 
-    // Open / close mobile menu
+
+    /* =====================================================
+       HAMBURGER MENU
+       ===================================================== */
+
     menuButton.addEventListener("click", function (e) {
+
+        e.preventDefault();
         e.stopPropagation();
 
-        nav.classList.toggle("mobile-open");
+        const isOpen = nav.classList.toggle("mobile-open");
 
         menuButton.setAttribute(
             "aria-expanded",
-            nav.classList.contains("mobile-open") ? "true" : "false"
+            isOpen ? "true" : "false"
         );
+
     });
 
-    // Mobile dropdown buttons
-    const dropdownButtons = nav.querySelectorAll(".aa-dropdown > button");
 
-    dropdownButtons.forEach(function (button) {
+    /* =====================================================
+       DROPDOWN MENUS
+       Works for:
+       About
+       India
+       Dubai
+       Services
+       or any future .aa-dropdown
+       ===================================================== */
+
+    const dropdowns = nav.querySelectorAll(".aa-dropdown");
+
+    dropdowns.forEach(function (dropdown) {
+
+        const button = dropdown.querySelector(":scope > button");
+
+        if (!button) return;
+
         button.addEventListener("click", function (e) {
-            // Only use click behavior on mobile
-            if (window.innerWidth > 900) return;
+
+            /* Desktop keeps normal CSS hover/dropdown behavior */
+            if (window.innerWidth > 900) {
+                return;
+            }
 
             e.preventDefault();
             e.stopPropagation();
 
-            const dropdown = button.parentElement;
+            /* Close other dropdowns */
+            dropdowns.forEach(function (otherDropdown) {
 
-            // Close other dropdowns
-            nav.querySelectorAll(".aa-dropdown.open").forEach(function (item) {
-                if (item !== dropdown) {
-                    item.classList.remove("open");
+                if (otherDropdown !== dropdown) {
+                    otherDropdown.classList.remove("open");
                 }
+
             });
 
+            /* Toggle selected dropdown */
             dropdown.classList.toggle("open");
+
         });
+
     });
 
-    // Close menu when a normal navigation link is clicked
+
+    /* =====================================================
+       CLOSE MENU AFTER CLICKING A LINK
+       ===================================================== */
+
     nav.querySelectorAll("a").forEach(function (link) {
+
         link.addEventListener("click", function () {
+
             if (window.innerWidth <= 900) {
+
                 nav.classList.remove("mobile-open");
 
-                nav.querySelectorAll(".aa-dropdown.open").forEach(function (item) {
-                    item.classList.remove("open");
+                dropdowns.forEach(function (dropdown) {
+                    dropdown.classList.remove("open");
                 });
 
-                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
             }
+
         });
+
     });
 
-    // Close menu when clicking outside
+
+    /* =====================================================
+       CLOSE WHEN CLICKING OUTSIDE
+       ===================================================== */
+
     document.addEventListener("click", function (e) {
+
+        if (window.innerWidth > 900) return;
+
         if (
-            window.innerWidth <= 900 &&
             nav.classList.contains("mobile-open") &&
             !nav.contains(e.target) &&
             !menuButton.contains(e.target)
         ) {
-            nav.classList.remove("mobile-open");
-            menuButton.setAttribute("aria-expanded", "false");
 
-            nav.querySelectorAll(".aa-dropdown.open").forEach(function (item) {
-                item.classList.remove("open");
+            nav.classList.remove("mobile-open");
+
+            dropdowns.forEach(function (dropdown) {
+                dropdown.classList.remove("open");
             });
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
         }
+
     });
 
-    // Reset mobile state when returning to desktop
+
+    /* =====================================================
+       RESET MOBILE STATE WHEN RETURNING TO DESKTOP
+       ===================================================== */
+
     window.addEventListener("resize", function () {
+
         if (window.innerWidth > 900) {
+
             nav.classList.remove("mobile-open");
 
-            nav.querySelectorAll(".aa-dropdown.open").forEach(function (item) {
-                item.classList.remove("open");
+            dropdowns.forEach(function (dropdown) {
+                dropdown.classList.remove("open");
             });
 
-            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
         }
+
     });
+
 });
