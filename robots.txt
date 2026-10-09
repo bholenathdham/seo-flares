@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 
 Disallow: /thank-you.html
+Disallow: /demo/
 
 Sitemap: https://seoflares.info/sitemap.xml
